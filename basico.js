@@ -1,5 +1,4 @@
 // COMANDOS BÁSICOS JS
-// é uma linguagem não tipada, interpretada, no qual pode declarar variáveis sem definir um tipo.
 
 // LEITURA DE DADOS:
 console.log("Algo para exibir.");
@@ -25,3 +24,20 @@ console.log(objeto.name);
 
 var array = [primeiroElemento = "leite", segundoElemento = "ovos"];
 console.log(array);
+
+// TIPOS DE DADOS:
+// js é uma linguagem não tipada, interpretada, no qual pode declarar variáveis sem definir um tipo.
+// será interpretado o tipo de dado e todas as variáveis são definidas por "var/let" e o interpretador define seu tipo.
+// var -> escopo global, let -> limitada ao escopo em que é declarada.
+// const não muda o valor, não adianta redefinir.
+var tipoDeVariavel;
+{
+    let valorApenasAquiNoEscopo;
+}
+const naoMudaOValor = 1;
+// os tipos de variável interpretadas presentes em js:
+
+console.log("String, Number (int/double), Boolean, Undefined, Symbol, BigInt");
+
+
+
