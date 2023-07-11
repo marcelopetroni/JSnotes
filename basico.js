@@ -39,5 +39,14 @@ const naoMudaOValor = 1;
 
 console.log("String, Number (int/double), Boolean, Undefined, Symbol, BigInt");
 
+// para concatenar variaveis/texto/afins use + para separá-las ou vírgulas se for só variáveis:
+var teste = 15;
+var teste2 = 20;
+
+console.log(teste2, teste);
+console.log("Segue lista de compras: " + array);
+
+// se quiser usar uma variável dentro de um texto use crase (``) + $ + variável dentro de chaves {algo}
+console.log(`pedro tem ${teste} anos.`);
 
 
