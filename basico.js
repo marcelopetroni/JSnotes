@@ -23,6 +23,10 @@ console.log(objeto.name);
 // ARRAY:
 // declarado a partir de colchetes []
 
+var vazio = [];
+var vazioComPosicoesDefinidas = new Array(10);
+console.log(vazioComPosicoesDefinidas);
+
 var array = [primeiroElemento = "leite", segundoElemento = "ovos"];
 console.log(array);
 // acessar valor específico do array:
