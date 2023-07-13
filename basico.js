@@ -20,6 +20,10 @@ var objeto = {
 
 console.log(objeto.name);
 
+// Quer apagar uma propriedade do objeto? use delete!
+delete objeto.name;
+console.log(objeto);
+
 // ARRAY:
 // declarado a partir de colchetes []
 

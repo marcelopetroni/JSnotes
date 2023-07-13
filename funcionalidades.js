@@ -22,7 +22,7 @@ let algo = "amo programação quando não me estressa.";
 let verificar = algo.includes("estressa");
 console.log(verificar);
 
-// Manipulando Array
+// MANIPULANDO ARRAY
 // .legth para imprimir a quantidade de posições de um array.
 // Quer transformar uma string em um array? use Array.from(variavel):
 let algo2 = "odeio problemas.";
@@ -49,3 +49,29 @@ console.log(algo2);
 var mostrandoIndex = algo2.indexOf('o');
 console.log("Index: " + mostrandoIndex);
 
+// FORMA SIMPLIFICADA DE CONDICIONAL: (funciona com java também!)
+
+var boleano = true;
+console.log(boleano ? "é verdadeiro" : "não é verdadeiro.");
+// condição ? sim (return se for true): não (return se for false)
+
+var pao = true;
+var queijo = true;
+var presunto = 2;
+
+console.log(pao && queijo ? "temos um sanduíche" : "não temos ingredientes");
+console.log(presunto == 2 ? "misto" : "não tem presuntos suficientes.");
+
+
+// ALGUMAS DIFERENÇAS DE JAVA:
+// operadores aritmeticos:
+// existe exponecial diferente de java que usa Math.pow()
+console.log(5** 2);
+
+// designar vs comparar vs ESTRITAMENTE igual:
+console.log(one = 1);
+console.log(5 == 5);
+
+console.log("2" === 2); // false
+console.log(2 === 2); // true
+// quando usa três iguais, além de comparar, ele verifica se é do mesmo tipo
