@@ -1,7 +1,9 @@
 // COMANDOS BÁSICOS JS
 
-// LEITURA DE DADOS:
+// EXIBIR DADOS:
 console.log("Algo para exibir.");
+
+// OBSERVAÇÕES: 
 // sempre finalizar linhas/bloco de código com ponto vírgula;
 // é usado aspas simples para strings longas com mais de uma linha.
 

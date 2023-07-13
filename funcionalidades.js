@@ -49,8 +49,8 @@ console.log(algo2);
 var mostrandoIndex = algo2.indexOf('o');
 console.log("Index: " + mostrandoIndex);
 
-// FORMA SIMPLIFICADA DE CONDICIONAL: (funciona com java também!)
 
+// FORMA SIMPLIFICADA DE CONDICIONAL: (funciona com java também!)
 var boleano = true;
 console.log(boleano ? "é verdadeiro" : "não é verdadeiro.");
 // condição ? sim (return se for true): não (return se for false)
@@ -61,6 +61,7 @@ var presunto = 2;
 
 console.log(pao && queijo ? "temos um sanduíche" : "não temos ingredientes");
 console.log(presunto == 2 ? "misto" : "não tem presuntos suficientes.");
+// obs: 0, undefined, null é considerado falso.
 
 
 // ALGUMAS DIFERENÇAS DE JAVA:
@@ -75,3 +76,47 @@ console.log(5 == 5);
 console.log("2" === 2); // false
 console.log(2 === 2); // true
 // quando usa três iguais, além de comparar, ele verifica se é do mesmo tipo
+
+
+// em exceções, na função que é suscetível a cair em uma, não é preciso por o "throws" ao lado dos parâmetros
+// e nem o new ExceptionDesejada:
+
+function teste(number) { // aqui teria throws ExceptionDesejada em java.
+    if(number == 1) {
+        throw "deu ruim"; // throw para interromper aplicação, o que será retonado no catch.
+                          // se fosse em java, teria que iniciar a exceção com new ExceptionDesejada.
+    }
+    console.log("deu bom");
+}
+try {
+    let number = 1;
+    teste(number);
+}
+catch(e) {
+    console.log(e); // aqui em java teria que por e.getMessage()
+}
+
+// a maioria dos operadores iguais a java, condicional, loop, porém há um extra:
+// FOR OF (que nem for each do java)
+
+let sentenca = "sentença";
+let numeros = [1, 2, 3, 4, 5];
+
+for(let char of sentenca) {
+    console.log(char);
+}
+for(let numero of numeros) {
+    console.log(numero);
+}
+
+// FOR IN (para objetos)
+let objeto = {
+    name: "pedro",
+    age: 50,
+    feliz: true
+};
+
+for(let atributos in objeto) {
+    console.log(atributos + " ="); // para mostrar nome do atributo
+    console.log(objeto[atributos]); // para mostra valores
+}
