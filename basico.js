@@ -79,3 +79,9 @@ let student = {
     age: 15
 }
 console.log(`${student.name} tem ${student.age} anos.`);
+
+// CASTING:
+// quer mudar transformar uma string em um number? use casting!
+let string = "40C"
+string = Number(string.replace("C", ""));
+console.log(string);

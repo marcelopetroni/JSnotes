@@ -50,6 +50,12 @@ var mostrandoIndex = algo2.indexOf('o');
 console.log("Index: " + mostrandoIndex);
 
 
+// Quer achar algum carctere/frase em uma string/número? use .includes(valorProcurado, sentença)
+let amostra = "não gosto de chocolate.";
+let procura = amostra.includes("chocolate");
+console.log(procura ? "A frase possui chocolate" : "A frase não possui chocolate");
+
+
 // FORMA SIMPLIFICADA DE CONDICIONAL: (funciona com java também!)
 var boleano = true;
 console.log(boleano ? "é verdadeiro" : "não é verdadeiro.");
