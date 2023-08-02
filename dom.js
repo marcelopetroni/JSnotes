@@ -29,3 +29,42 @@ element.value = "alterando valor."
 // Quer adicionar ou remover um atributo de um elemento? use:
 element.setAtributte('class', 'nome');
 element.removeAtributte('id');
+
+
+// Quer mudar o estilo como se fosse CSS? 
+
+// primeiro referencie o item que irá mudar:
+var element = document.querySelector('body');
+
+// depois mude ele por: (nesse exemplo mudei a cor do background, mas tem vários outros recursos)
+element.style.backgroundColor = red;
+
+
+// EVENTOS (O PRINCIPAL)
+
+// Quer adicionar features, alguma funcionalidade em sua página?
+
+// HTML:
+<h1 onclick = "funcaoJS()">Alguma coisa em minha página</h1>
+
+// JS: 
+function funcaoJS() {
+    console.log("exemplo que printa algo ao clicar");
+}
+
+// tem várias funcionalidades como o onlick, ondblclick, onmouseover, etc
+// eventos de teclado: onkeypress, onkeyup, onkeydown
+
+// Atribuindo um evento, seu nome e função:
+const h1 = document.querySelector('h1');
+
+h1.addEventListener("click", print);
+// ou h1.onclick = print;
+
+function print() {
+    console.log("algo");
+}
+
+// o que muda aqui? não é preciso informar no HTML o parâmetro para acontecer o evento, foi atribuido aqui.
+
+
