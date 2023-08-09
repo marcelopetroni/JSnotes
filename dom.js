@@ -59,7 +59,7 @@ function funcaoJS() {
 const h1 = document.querySelector('h1');
 
 h1.addEventListener("click", print);
-// ou h1.onclick = print;
+// ou h1.onclick = print; //h1 seria a referencia ao item html, onclick a função js quando clicar no item e print a função js criada.
 
 function print() {
     console.log("algo");
