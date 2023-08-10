@@ -15,6 +15,7 @@ document.querySelectorAll(".class"); // nesse exemplo por exemplo ele mostraria 
 // Quer representar um texto de um nó? use:
 Node.textContent = "Algo para representar um texto.";
 Node.innerText = "Algo para representar um texto.";
+document.body.innerText = "algo";
 
 // Quer incluir HTML em seu texto e não representá-lo de forma literal? use:
 Node.innerHTML = "Algo para representar um texto <small> !!! </small>"; // o ponto de exclamação apareçá pequeno obedecendo a tag.
