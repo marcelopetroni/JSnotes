@@ -153,5 +153,6 @@ function funcionalidades(props) {
 // nesse caso, a Home Page apresentará a mesma feauture representada duas vezes com dados diferentes em cada uma.
 // pois seus dados foram definidos respectivamente em seu componente.
 
+// ESTADOS
 
 
