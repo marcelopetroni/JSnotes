@@ -1,5 +1,5 @@
 // API PARA CONECTAR O JS COM O HTML
-// Inicialmente bote a tag <script src = "link para código css"></script> no HTML para fazer a ponte
+// Bote a tag <script src = "link para código js"></script> no body do corpo HTML para fazer a ponte.
 
 // Quer pegar algum elemento html específico? use:
 
