@@ -92,6 +92,7 @@ npm run dev // para inicializar e ser dito em que local host (servidor local) es
 
 // ORGANIZAÇÃO E REUTILIZAÇÃO DE CÓDIGO: Components
     // Você pode criar diversos recursos para ser exibido e repetido quantas vezes quiser em sua página.
+    // Além disso, é possível criar componentes interativos que muda valores e realiza funções em um programa.
 
     ` EXEMPlO: Considere dois diretórios, uma pasta chamada Home com seu arquivo jsx e css e um chamado
     funcionalidades onde há uma feauture específica que você deseja adicionar a sua Home page, com seus respectivos
@@ -112,7 +113,9 @@ npm run dev // para inicializar e ser dito em que local host (servidor local) es
     Veja esse mesmo exemplo:
     `   
     // arquivo: home.jsx
-    // importe o arquivo desejado para adicionar àquela parte do código que deseja inserí-lo.
+    // importe o react e o arquivo desejado para adicionar àquela parte do código em que deseja inserí-lo.
+
+    import React from 'react';
     import funcionalidades from '../../funcionalidades';
     function Home() {
         return(
@@ -128,6 +131,7 @@ npm run dev // para inicializar e ser dito em que local host (servidor local) es
     }
 
 // VOCÊ PODE ADICIONAR PROPRIEDADES A SEUS COMPONENTES PARA TER DADOS DIFERENTES:
+import React from 'react';
 import funcionalidades from '../../funcionalidades';
     function Home() {
         return(
@@ -153,6 +157,100 @@ function funcionalidades(props) {
 // nesse caso, a Home Page apresentará a mesma feauture representada duas vezes com dados diferentes em cada uma.
 // pois seus dados foram definidos respectivamente em seu componente.
 
+// MAS AFINAL COMO CRIA UM COMPONENTE?
+    // 1ª primeiro importe a biblioteca React (obrigatório em arquivos jsx)
+    import React from 'react';
+
+    // Depois dependendo se houver um estado ou não prossiga pro próximo passo:
+        // 2º sem um estado, estrutura simples e direta:
+
+        function MeuComponente() {
+            return (
+              <div>
+                <p>Este é um componente simples sem estado.</p>
+              </div>
+            );
+          }
+        
+        // 2º com estado, importe Component e declare a classe herdando Component
+        // 3º declare um construtor com os atributos desejados, usado para atribuir valores iniciais:
+        import React, { Component } from 'react';
+        class MeuComponente extends Component {
+            constructor(props) {
+              super(props);
+              this.state = {
+                exemplo = "valor inicial do atributo"
+              };
+            }
+        
+        // ok mas pra que serve os estados? e como usá-los para manipular os dados acima?
+
 // ESTADOS
+// O estado é um objeto interno do React usado para conter dados ou informações sobre um componente. 
+// O estado de um componente pode mudar com o tempo; sempre que muda, o componente é renderizado novamente.
 
 
+// No caso, uma classe que contém um estado herda da biblioteca Component e através de um construtor e você pode 
+// utilizá-lo para aramazenar, mudar e manipular seus dados.
+
+    // declarando um estado dentro do construtor:
+    import React, { Component } from 'react';
+    class exemplo extends Component { // sempre botar a classe para extender de Component.
+        constructor(props) {
+        super(props);
+        this.state = {
+            oEstadoEmQuestao: "exemplo"
+        };
+        }
+    }
+
+// mas como eu mudo valores? e com que utilidades práticas eu vou fazer isso?
+// para mudar valores de um componente utilize setState({estado/atributo: valorNovo});
+
+const funcaoParaMudarValor = () => {
+    this.setState({valor : "novoValor"})
+}
+
+// RESUMO: Os estados são usados principalmente para armazenar dados que podem mudar ao longo do tempo e 
+// influenciar a renderização do componente. Portanto, você deve usar um estado quando o componente precisar 
+// rastrear e exibir informações que podem ser alteradas pelo usuário ou por interações com a aplicação.
+
+    // Exemplo: botão com valor inicial(o estado) declarado no construtor que muda o conteúdo dentro dele
+    // quando o usuário clica no botão
+
+
+    // SEGUE EXEMPLO CITADO:
+    // 1ª importa component toda vez que criar um componente com estado.
+    import React, { Component } from 'react';
+
+    class MeuComponente extends Component { // 2º declara a classe extendendo Component.
+      constructor(props) {
+        super(props);
+        this.state = {
+          textoBotao: 'Clique Aqui' // 3º define o valor inicial do estado.
+        };                          // pense como uma varíavel fluída que pode sempre mudar de valor.
+      }
+    
+      atualizarTexto = () => {
+        this.setState({ textoBotao: 'Texto Atualizado' }); 
+        // 4º declara a classe responsável por manipular seu(s) valor(es).
+            // nesse caso mudando o texto escrito dentro do botão.
+      }
+    
+      render() { // render para Re-renderização do valor do estado.
+        return (
+          <div>
+                // note que para funcionar foi preciso botar o estado dentro do botão por "this.state.textoBotao"
+                // esse valor é fluído que iniciará com o valor do construtor com possibilidade de mudança
+                // se a função for chamada pelo click do usuário.
+
+            <button onClick={this.atualizarTexto}>{this.state.textoBotao}</button> // onClick = {funcao}
+
+            // 5º Defina o parâmetro em que vai ser acionado a função que mudará seu valor.
+                // nesse caso é quando o usuário clicar no botão.
+          </div>
+        );
+      }
+    }
+    
+    export default MeuComponente;
