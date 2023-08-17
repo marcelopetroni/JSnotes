@@ -37,3 +37,8 @@ function Pessoa(name, age, height) {
 var objetoNovo = new Pessoa("Ana", 15, 1.70);
 // exibe os atributos definidos do objeto:
 console.log(objetoNovo);
+
+// use () => como atalho para criar uma função em js:
+// exs:
+var nomeFuncao = () => x * y;
+nomeFuncao = (param) => 10 * param;
