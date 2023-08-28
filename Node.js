@@ -41,3 +41,20 @@ const modulo2 = require('./nomeArquivo.js'); // arquivo 2
 // Você pode atribuir um arquivo a ser executado como no exemplo "start" : NomeArquivo no arquivo json.js
 // e no terminal escrever npm run start que será executado NomeArquivo.
 
+// Recurso interessante do Node: process.stdin.on
+  // usado para interções em tempo real de entrada de dados.
+  // ex: perguntas que são lançadas a medida que o usuário responde elas.
+
+const ask = (index = 0) => {
+  process.stdout.write("\n Alguma pergunta aqui.");
+}
+
+process.stdin.on("roda qualquer coisa aqui repetidamente até dar process.exit", data => {
+  if("alguma condição") {
+    ask();
+  }
+  else {
+    process.exit();
+  }
+});
+
