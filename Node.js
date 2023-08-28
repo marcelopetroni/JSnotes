@@ -20,3 +20,24 @@ const modulo2 = require('./nomeArquivo.js'); // arquivo 2
 
 // assim "linka" um javascript a outro.
 
+// NPM (node package manager)
+    // Ele é usado para instalar, gerenciar e compartilhar pacotes de código reutilizável escritos em JavaScript.
+
+// npm install <nome-do-pacote>: Instala um pacote específico.
+// npm run AlgoAqui: executa scripts definidos no arquivo "package.json"
+
+`{
+    "name": "meu-projeto",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "NomeArquivo",
+      "test": "arquivo tests"
+    },
+    "dependencies": {
+      // Dependências do projeto
+    }
+  }`
+
+// Você pode atribuir um arquivo a ser executado como no exemplo "start" : NomeArquivo no arquivo json.js
+// e no terminal escrever npm run start que será executado NomeArquivo.
+
