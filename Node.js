@@ -58,3 +58,20 @@ process.stdin.on("roda qualquer coisa aqui repetidamente até dar process.exit",
   }
 });
 
+// Funções de tempo Node:
+
+  // SetTimeout: Irá esperar um tempo e uma rodar função.
+    setTimeout(funcaoSemParentesesPorqueEhReferencia, tempoASeEsperar );
+    // clearTimeout: Cancela função acima.
+
+    //ex:
+      const finished = () => console.log("done!");
+      setTimeout(finished, 3000); // esperará 3s para ser executado a função.
+    
+      console.log("Esse print será mostrado primeiro que o da função acima pelo setTimeOut, um assincronismo");
+
+
+  // setInterval: De tempo x em tempo x será executado uma função.
+    setInterval(funcao, interval); // a cada tempo do intervalo, será executado a função escolhida.
+
+    // clearInterval: Cancela função acima.
