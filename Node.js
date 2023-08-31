@@ -75,3 +75,21 @@ process.stdin.on("roda qualquer coisa aqui repetidamente até dar process.exit",
     setInterval(funcao, interval); // a cada tempo do intervalo, será executado a função escolhida.
 
     // clearInterval: Cancela função acima.
+
+
+// EVENTS
+ // Usado para permitir a comunicação assíncrona entre diferentes partes do código. o Event Emitter é uma parte 
+ // importante do módulo "events" incorporado, que permite que objetos emitam e ouçam eventos.
+
+  // chamando events
+  const EventEmitter = require('events');
+
+  // emitindo evento:
+  const ev = new EventEmitter();
+  ev.emit("Say something", "Algo");
+  ev.emit("Say something", "OutraCoisa");
+
+  // ligar evento:
+  ev.on("Say something", (message) => {
+    console.log(message);
+  })
