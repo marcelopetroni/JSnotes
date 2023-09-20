@@ -1,5 +1,6 @@
 // O QUE É NODE?
-// baseado no V8 do Google Chrome, é utilizado para executar JavaScript fora do navegador, usado para APIs back-end, servidor web, etc.
+// Baseado no V8 do Google Chrome, é utilizado para executar JavaScript fora do navegador, usado para APIs back-end, servidor web, etc.
+// Não é um framework, é um ambiente javascript aliado ao servidor.
 
 // MÓDULOS
 // são funções e blocos de código encapsulados com funcionalidades específicas.
