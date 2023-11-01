@@ -90,3 +90,18 @@ console.log(string);
 
 // var nome = prompt("Qual o seu nome? ");
 // Só funciona no navegador.
+
+// Quer pegar um elemento específico HTML para manipulá-lo? (uma div, uma main, um p), veja:
+
+// HTML: 
+<div id = "atribuicao">Alguma coisa aqui</div>
+
+// JavaScript: 
+var manipular = document.getElementById("atribuicao");
+
+for (let i = 0; i < 3; i++) {
+    console.log(manipular);
+}
+
+// o que acabei de fazer? peguei o conteúdo de uma div e repeti ele três vezes no terminal através de um loop
+// o céu é o limite com o que pode ser fazer ao utilizar document.getElementById("id")
