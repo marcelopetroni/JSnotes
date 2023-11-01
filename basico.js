@@ -85,3 +85,8 @@ console.log(`${student.name} tem ${student.age} anos.`);
 let string = "40C"
 string = Number(string.replace("C", ""));
 console.log(string);
+
+// Quer fazer leitura de dados e armazenar em uma variável? use prompt:
+
+// var nome = prompt("Qual o seu nome? ");
+// Só funciona no navegador.
