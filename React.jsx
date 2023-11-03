@@ -285,3 +285,21 @@ const funcaoParaMudarValor = () => {
 
     // Pensa no estados como armazenadores dos valores que podem mudar em minha página e o UseEffect
     // o responsável por mudar esse valor do estado a cada rendereização.
+
+    
+    // APLICAR EFEITO CSS ATRAVÉS DE UM EVENTO NO ARQUIVO JSX:
+
+    <span className = "exemplo" style={estado ? {color: 'red'} : {}}>
+        {/*Ao usar 'style' você pode através desse formato de condicional, verificar se sua variável 
+        de estado for verdadeira e assim nessas condições aplicar uma propriedade css a ela */}
+
+        {/* Em outras palavras seria: 
+        if(estado) {
+           span.color = red;
+
+        } else {
+            // nada a se fazer
+        }*/}
+
+        {"conteudo do meu span aqui"}
+    </span>
