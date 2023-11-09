@@ -303,3 +303,27 @@ const funcaoParaMudarValor = () => {
 
         {"conteudo do meu span aqui"}
     </span>
+
+// LINKAR FUNÇÕES/INFORMAÇÕES ENTRE ARQUIVOS
+// QUER APLICAR FEAUTURES A SEU COMPONENTE MAS NECESSITA DOS ESTADOS/INFOS DO ARQUIVO PRINCIPAL? LINKE ELES:
+
+    // ex: card que apresenta botão de apagar, mas a lista de cards ta no arquivo principal e para apagá-lo, 
+    // precisa da condição do OnClick do botão dentro do componente para poder aplicar feauture no arquivo principal
+
+    // Arquivo principal:
+    {<Card key={index} task={item} onDelete={handleDelete} /> } /* card com props */
+                                            // onDelete é a referência da função apagar que será passado ao componente
+    const handleDelete = (item) => {
+        // função de apagar item da lista de cards
+    }
+
+    // Arquivo do componente:
+    function componente({dado, onDelete}) { // note o OnDelete aqui
+        return (
+            <button onClick={() => onDelete(task)}>Apagar</button>
+        )
+    }
+
+/* O que ocorre aqui? o componente recebe a função do arquivo principal (importa como prop) e toda vez que 
+é apertado no botão, é acionado a função apagar do arquivo princpal por meio do Onclick que chama a referência da 
+função em questão e é realizado a exclusão do card por meio desse paralelismo */
