@@ -35,7 +35,7 @@ Como conecta emulador ao meu projeto react native?
         - escreva: Set-ExecutionPolicy Unrestricted
 
     5º -> escreva expo start --android para projeto ser exibido no aparelho virtual
-        * toda vez que atualizar seu projeto, deve começar a escrever reload app
+        * toda vez que atualizar seu projeto, aperte r logo após ter escrito expo start --android
 
     6º -> MUDE CONFIGURAÇÕES DE SEGURANÇA DE VOLTA
         - entre no powershell como admistrador
