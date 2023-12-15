@@ -29,6 +29,9 @@ Como conecta emulador ao meu projeto react native?
     
     3º -> aperte no icone do celular ao lado da seta de rodar ou aperte crtl + shift + p e escreva emulator
         * em seguida o emulador será exibido.
+        CUIDADO EMULADOR NAO DEVE ESTAR RODANDO NO ANDROID STUDIO ANTES DE SER ATIVO NO PROJETO 
+        * se rodar no android studio, ele vai vincular ao arquivo do próprio android studio e não seu projeto
+        * se não pegar, apague o projeto do android studio e crie outro
 
     4º -> para rodar emulador é preciso desabilitar o sistema de segurança de scripts
         - entre no powershell como admistrador
