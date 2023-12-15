@@ -15,6 +15,7 @@
             <img src= "isso é uma tag de imagem" alt="" />
             <span> isso é uma caixa de texto </span>
             <button> isso é um botão </button>
+            <input type="isso é um input de texto" />
             </>
         )
     }
@@ -22,7 +23,7 @@
 
     // React Native
         // primeiro importe os componentes da biblioteca react native
-        import {View, Image, Text, TouchableOpacity} from 'react-native';
+        import {View, Image, Text, TouchableOpacity, TextInput} from 'react-native';
 
     function native() {
         render(
@@ -31,6 +32,8 @@
             <Image>Esse é um componente de imagem no react native</Image>
             <Text>Esse é um componente de texto no react native</Text>
             <TouchableOpacity>Tem diferentes 'touchables', outros botões, esse é o opacity</TouchableOpacity>
+            <TextInput>Esse é um componente de input de texto</TextInput>
+            
             </>
         )
     }
