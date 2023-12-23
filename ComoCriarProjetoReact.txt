@@ -1,6 +1,6 @@
 SEGUINDO ESSES PASSOS VOCÊ INICIA UM PROJETO REACT.JS
 
-cd + diretório // // ex -> C:\Users\marce\OneDrive\Documentos\VscodeProjetos 
+cd + diretório // // ex -> C:\Users\marce\OneDrive\Documentos\VscodeProjetos\Estudos Gerais\Front-end
 para especificar onde quer incluir seu projeto, você pode copiar caminho lá no arquivo
 
 npm create vite@latest nomeProjeto --template react // para criar um projeto vite + react
