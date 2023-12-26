@@ -1,5 +1,6 @@
-// API PARA CONECTAR O JS COM O HTML
-// Bote a tag <script src = "link para código js"></script> no final do body do código HTML para fazer a ponte.
+// DOM
+    // O DOM permite que os programadores acessem, manipulem e atualizem, a estrutura e o estilo de um documento.
+    // Bote a tag <script src = "link para código js"></script> no final do body do código HTML para fazer a ponte.
 
 // Quer pegar algum elemento html específico? use:
 

@@ -2,6 +2,35 @@
 // Baseado no V8 do Google Chrome, é utilizado para executar JavaScript fora do navegador, usado para APIs back-end, servidor web, etc.
 // Não é um framework, é um ambiente javascript aliado ao servidor.
 
+  // O node utiliza API rest para se comunicar entre sistemas, veja:
+
+  /* CRUD: C -> Create (criar): cria um novo registro no banco de dados.
+           R -> Read (ler): lê um registro de um dado ja existente no banco de dados.
+           U -> Update (atualiza): Atualiza um registro de um dado já existente no banco de dados.
+           D -> Delete (deleta): Exclui um registro de um dado já existente no banco de dados.
+
+    -> Representa respectivamente os métodos HTTP post, get, pull e delete.
+
+    O front-end (cliente) pode usar a API REST para solicitar dados do servidor (operação de leitura).
+    O back-end (servidor) recebe essa solicitação, busca os dados no banco de dados e retorna 
+    a resposta (response) para o front-end. */
+
+  // HTTP: Protocolo de Transferência de Hipertexto, utilizado como uma forma segura de troca de dados na internet.
+    // Esses dados são frequentemente trocados em formato JSON, XML, HTML, etc...
+  
+  // Códigos http:
+    // toda vez que o front end envia um requisição para o backend, é recebido uma response que pode incluir dados
+    // e um código http que irá representar o status da operação desejada:
+
+    // Mais comuns:
+    /* 1XX: Informativo: O processo continua em andamento.
+       2XX: Confirmação: A ação foi bem sucedida/concluída.
+       3XX: Redirecionamento: Algo precisa ser feito ou foi feito para concluir operação.
+       4XX: Erro do cliente: Operação não pode ser concluída. (ex: famoso 404 not found)
+       5XX: Erro no servidor: Servidor falhou em encontrar operação.
+    */
+  // você pode a partir desses códigos tratar erros por exemplo.
+
 // MÓDULOS
 // são funções e blocos de código encapsulados com funcionalidades específicas.
 
@@ -14,7 +43,7 @@ console.log(__filename);
 // PARA REQUISITAR/ADICIONAR UM MÓDULO:
 const modulo = require('modulepath');
 
-// Quando criar um módulo, use exports para possibilitar enviá-lo e rquire para requisitado no arquivo desejado:
+// Quando criar um módulo, use exports para possibilitar enviá-lo e require para requisitado no arquivo desejado:
 module.exports = "algo aqui"; // <--- arquivo 1 (nomeArquivo.js)
 
 const modulo2 = require('./nomeArquivo.js'); // arquivo 2
