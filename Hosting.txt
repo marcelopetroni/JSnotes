@@ -1,0 +1,14 @@
+Conceitos gerais:
+
+HTTP: Protocolo de Transferência de Hipertexto, utilizado como uma forma segura de troca de dados na internet. Onde 
+um navegador (cliente) estabelece a comunicação com um servidor da World Wide Web (WWW) e faz requisições pela 
+interface. Esses dados são frequentemente trocados em formato JSON, XML, HTML, etc entre o back-end (servidor) 
+e o front-end (cliente).
+
+Localhost refere-se ao ambiente de desenvolvimento local em sua própria máquina, onde você hospeda e testa 
+seu aplicativo apenas localmente, utilizando seu endereço IP '127.0.0.1' (se refere ao endereço local de todo pc). 
+Ao utilizar serviços de hospedagem como Vercel ou Netlify, você coloca seu aplicativo na World Wide Web (WWW), 
+tornando-o acessível pela internet. Esses serviços fornecem servidores web que distribuem seu aplicativo globalmente, 
+permitindo que os usuários o acessem por meio de um domínio específico, como "seu-aplicativo.vercel.app".
+
+Para fazer deploy de seu projeto, acesse o Vercel, logue sua conta GitHub com o repositório do projeto e execute.
