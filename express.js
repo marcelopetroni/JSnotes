@@ -27,3 +27,20 @@ server.get('/rotaDesejada', (req, res) => {
         // send para enviar dado.
 })
 
+// QUERY E ROUTE PARAMS 
+    // A diferença fundamental está em como os parâmetros são passados na URL
+    // req.query.algo =>  aparecem após um ponto de interrogação (?) na URL, 
+        // usado para filtrar/personalizar solicitação de dados, opcionais
+        app.get('/rota', (req, res) => {
+            const usuario = req.query.usuario;
+            const nome = req.query.nome;
+            // Restante do código...
+          });
+
+    // req.params.algo => são incorporados à própria rota, usados para identificar recursos, obrigatórios
+        app.get('/rota/:usuario/:nome', (req, res) => { // declarados após ':' 
+            const usuario = req.params.usuario;
+            const nome = req.params.nome;
+        });
+
+
