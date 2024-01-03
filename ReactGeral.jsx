@@ -20,6 +20,7 @@ npm run dev // para inicializar e ser dito em que local host (servidor local) es
 
 
 // ESTRUTURA PROJETO REACT:
+    // 'rafce' para snippet de estrutura básica de um projeto react
     // OBS: jsx é uma extensão do react que possibilita a mistura de JavaScript e HTML.
 
 // node_modules - que contém todos os pacotes e dependências da aplicação;

@@ -58,7 +58,7 @@
             const { atributo } = req.query; // req.query.algo ou a constante entre {} para não repetir duas vezes.
 
             const INSTRUCAOSQL = 'SELECT * FROM posts WHERE id = ?';
-            bd.query(INSTRUCAOSQL, [atributo], (error, results) => {
+            bd.query(INSTRUCAOSQL, (atributo], (error, results) => {
                 if (error) {
                     console.error(error);
                 }
@@ -118,5 +118,40 @@
             // algo a se fazer aqui
         });
     })
+
+// MIDDLEWARES
+    /* Middleware em Express.js é uma função que possui acesso ao objeto de solicitação (req), 
+    o objeto de resposta (res), e a próxima função no ciclo de vida do aplicativo (next)
+
+        ele funciona como um intermédiario, uma função fora de uma rota capaz de manipular
+        operações entre requisições. */
+
+    // Casos comuns que são usados middlewares:
+        // Autenticação, registro de solicitações, manipulação de cookies, etc, você realiza uma operação antes
+        // que a solicitalçai atinja a rota especificada para ela. veja:
+
+    // Esse exemplo de middleware verifica se o front-end está solicitando a atualização do atributo correto
+
+        const Checagem = (req, res) => {
+            // verifica se na requisição vinda do front-end apresenta o atributo name.
+            if(!req.body.name) {
+                return req.status(400).json("Nome é obrigatório/Nome inválido/Nome não fornecido.")
+            }
+            // else: continuar solicitações
+            return next();
+        }
+
+        server.put('/rota', Checagem /* vai passar aqui */, (req, res) => {
+            const {name} = req.params;
+            const SQL = 'SELECT * FROM posts WHERE id = ?';
+
+            db.query(SQL, [name], (error, results) => {
+                if(error) {
+                    res.send(error); 
+                }
+                // else: realizou solicitação.
+            })
+        })
+
 
 
