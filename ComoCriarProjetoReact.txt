@@ -5,6 +5,9 @@ para especificar onde quer incluir seu projeto, você pode copiar caminho lá no
 
 npm create vite@latest nomeProjeto --template react // para criar um projeto vite + react
 
+npm install para aparecer o node_modules
+npm install -D sass para baixar o sass
+
 code . // para entrar no projeto no vscode // atalho para entrar no projeto pelo vscode rapidamente
 
 NO PROJETO: 
