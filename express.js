@@ -58,7 +58,7 @@
             const { atributo } = req.query; // req.query.algo ou a constante entre {} para não repetir duas vezes.
 
             const INSTRUCAOSQL = 'SELECT * FROM posts WHERE id = ?';
-            bd.query(INSTRUCAOSQL, (atributo], (error, results) => {
+            bd.query(INSTRUCAOSQL, [atributo], (error, results) => {
                 if (error) {
                     console.error(error);
                 }
@@ -140,7 +140,6 @@
             // else: continuar solicitações
             return next();
         }
-
         server.put('/rota', Checagem /* vai passar aqui */, (req, res) => {
             const {name} = req.params;
             const SQL = 'SELECT * FROM posts WHERE id = ?';
