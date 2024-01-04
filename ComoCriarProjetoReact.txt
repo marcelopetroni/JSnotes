@@ -7,6 +7,7 @@ npm create vite@latest nomeProjeto --template react // para criar um projeto vit
 
 npm install para aparecer o node_modules
 npm install -D sass para baixar o sass
+npm install react-icons para instalar os icons usado no react icons
 
 code . // para entrar no projeto no vscode // atalho para entrar no projeto pelo vscode rapidamente
 
