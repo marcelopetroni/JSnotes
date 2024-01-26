@@ -53,3 +53,12 @@ const message = () : void => {
     // OBS IMPORTANTE: QUER VER/BOTAR AUTOMATICAMENTE O QUE FALTA SER DECLARADO DO OBJETO INVÉS DE TRANSCREVER
     // CADA PROP DELE? APERTE CTRL + SPACE QUE APARECE COMO SUGESTÃO.
 
+// Cuidado com tipos opcionais, veja:
+
+function exemplo2(massage:string) {
+}
+
+exemplo2(data.cpf!) // nesse exemplo eu tento chamar uma prop de tipo string | undefined 
+                    // e tem incompatibilidade com o parâmetro da função que é só string
+
+// solução? botar um '!' ao lado da prop que foi definida como opcional ou acrescentar '?' no param da função.
