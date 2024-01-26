@@ -26,3 +26,30 @@ const sum = (num: number, num2: number): number => {
 const message = () : void => {
     console.log('exemplo'); // por default se não tiver 'return' ele terá o retorno do tipo void
 }
+
+// TYPES E INTERFACES:
+    // São estruturas usados para declaração de tipos de objeto:
+
+    interface Pessoa {
+        name: string
+        email: string
+    }
+
+    type pessoas = {
+        pessoas: Pessoa[] // a variável pode ser do tipo objeto, nessse exemplo é uma lista de objetos do tipo pessoa
+        aboutThem: string
+        cpf?: string // ao botar '?' após nome da variável, 
+                    // torna o tipo definido 'opcional', adicionando o tipo 'undefined' além se string nesse exemplo
+    }
+
+    // Ao declarar um objeto com retorno :objeto, você deve/pode definir suas props:
+    const data : pessoas = {
+        aboutThem: 'Fulano e  Beltrano são gentis.',
+        pessoas: [{email: 'fulano@document.com', name: 'fulano'}, {email: 'beltrano@doe.com', name: 'beltrano'}]
+        // nesse exemplo, a prop 'pessoas', tem como tipo uma lista de objetos 'pessoa'.
+        // logo foi preciso abrir um [] para a lista e um {} para botar cada respectiva prop do objeto pessoa
+    }
+
+    // OBS IMPORTANTE: QUER VER/BOTAR AUTOMATICAMENTE O QUE FALTA SER DECLARADO DO OBJETO INVÉS DE TRANSCREVER
+    // CADA PROP DELE? APERTE CTRL + SPACE QUE APARECE COMO SUGESTÃO.
+
