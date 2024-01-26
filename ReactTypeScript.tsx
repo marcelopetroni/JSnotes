@@ -62,3 +62,18 @@ exemplo2(data.cpf!) // nesse exemplo eu tento chamar uma prop de tipo string | u
                     // e tem incompatibilidade com o parâmetro da função que é só string
 
 // solução? botar um '!' ao lado da prop que foi definida como opcional ou acrescentar '?' no param da função.
+
+// UNION
+    // Quando você define dois tipos para uma variável, nesse exemplo veremos de dois objetos:
+
+type animais = {
+    vertebrado: boolean
+}
+
+const seresVivos: pessoas & animais = {
+    aboutThem: "são seres",
+    pessoas: [{email: 'algo', name: 'algo'}],
+    vertebrado: true
+    // foi declarado as props dos dois em uma variável por union
+}
+
