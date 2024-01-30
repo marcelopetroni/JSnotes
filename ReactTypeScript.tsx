@@ -124,7 +124,7 @@ exemplo2(data.cpf!) // nesse exemplo eu tento chamar uma prop de tipo string | u
     // componente no html que chamará função que exibe dados.
     < GamepadButton onClick = {handleData} /> // ao apertar o botão, é exibido os dados desejados.
 
-// UNION
+// UNION 
     // Quando você define dois tipos para uma variável, nesse exemplo veremos de dois objetos:
 
 type animais = {
@@ -138,3 +138,16 @@ const seresVivos: pessoas & animais = {
     // foi declarado as props dos dois em uma variável por union
 }
 
+// CLASSES NO TYPESCRIPT: (parecido com java)
+    // você deve ter os atributos com seu tipo e um construtor onde será extraídos os dados dos atributos:
+    class Exemplo {
+        private name: string /* pode ser usado readonly, protected e private */
+        private weight: number
+        private height: number
+
+        constructor(name: string, weight: number, height: number) {
+            this.name = name
+            this.weight = weight
+            this.height = height
+        }
+    }
