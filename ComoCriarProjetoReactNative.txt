@@ -3,7 +3,15 @@ SEGUINDO ESSES PASSOS VOCÊ INICIA UM PROJETO REACT NATIVE COM EXPO:
 cd + diretório // ex -> C:\Users\marce\OneDrive\Documentos\VscodeProjetos\Estudos Gerais\Front-end
 para especificar onde quer incluir seu projeto, você pode copiar caminho lá no arquivo
 
-npx create-expo-app nomeProjeto // para criar um projeto react native
+RECOMENDAÇÃO:
+npm install -g expo-cli // Instala o Expo CLI globalmente
+npx create-expo-app nomeProjeto // cria um novo projeto Expo para React Native
+npx expo start // por no terminal do vscode para rodar programa no emulador (precisa ser adicionado pelo android studio)
+// é preciso apertar tecla do menu que diga para abrir com android, no meu caso atual, foi 'a'
+
+Outra alternativa:
+npm install -g react-native-cli // para instalar react native
+npx react-native init MeuProjeto --template react-native-template-js // para criar um projeto react native
 
 code . // atalho para entrar no projeto pelo vscode rapidamente
 
